@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code with Dinesh</title>
+</head>
+<body>
+    <ul class="language">
+        <li>java</li>
+    </ul>
+</body>
+<script>
+    function newLang(lang){
+        const li=document.createElement('li')
+        li.innerHTML=`${lang}`
+        document.querySelector('.language').appendChild(li)
+    }
+    newLang("python")
+
+    function newOptiLang(langName){
+        const li=document.createElement('li')
+        const addlang=document.createTextNode(langName)
+        li.appendChild(addlang)
+        document.querySelector('.language').appendChild(li)
+    }
+    newOptiLang("c++")
+    newOptiLang("javaScript")
+
+    
+    //edit
+    const secondLang=document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML="goLang"
+
+    const newLi=document.createElement('li')
+    newLi.innerText="goLang"
+    secondLang.replaceWith(newLi)
+    //edit
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML='<li>type Script</li>'
+    
+    //remove
+    const lastLang=document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
